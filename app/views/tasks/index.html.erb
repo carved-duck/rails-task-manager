@@ -1,0 +1,11 @@
+<div class="container">
+    <%= link_to '+', new_task_path, class: 'btn btn-light'  %>
+    <div class="card-category">
+                <h1>Tasks</h1>
+                <% @tasks.each do |task| %>
+         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+                <%= link_to task.title, task_path(task), class: "text-decoration-none text-blue" %>
+                <% end %>
+         </div>
+    </div>
+</div>
